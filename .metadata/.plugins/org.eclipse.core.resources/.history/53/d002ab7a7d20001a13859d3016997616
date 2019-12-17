@@ -1,0 +1,29 @@
+package unidade4;
+
+public class Conta {
+
+	public static void main(String[] args) {
+		//atributos
+		private int numero;
+		private double saldo;
+		private double limite;
+		private String nome;
+		
+		
+		
+		//metodos
+		public boolean saca(double valor) {
+			return false;
+		}
+		
+		public void deposita(double valor) {
+			
+		}
+		
+		public void transfere(Conta destino, double valor) {
+			
+		}
+
+	}
+
+}
