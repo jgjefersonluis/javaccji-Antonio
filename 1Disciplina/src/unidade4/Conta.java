@@ -2,41 +2,19 @@ package unidade4;
 
 public class Conta {
 	
+	
 	//atributos
 	private int numero;
-	private double saldo;
+	protected double saldo;
 	private double limite;
-	private String nome;
+	private Cliente cliente[];
 	
-	//metodos
-	public boolean saca(double valor) {
-		if (valor <= saldo)
-		{
-			saldo = saldo - valor;
-		return true;
-		}
-		else
-			return false; // não conseguiu realizar o saque
+	
+	public void atualiza(double taxa)
+	{
+		this.saldo = this.saldo + this.saldo*taxa;
 	}
 	
-	public void deposita(double valor) {
-		saldo = saldo + valor;
-		
-	}
-	
-	public void transfere(Conta destino, double valor) {
-		if(valor <= saldo)
-		{
-			this.saldo = this.saldo - valor;
-			destino.deposita(valor);
-		}
-		else
-			System.out.println("Não foi possivel fazer a transferencia");
-		
-		
-	}
-	
-	// getters e setters
 	
 	public int getNumero() {
 		return numero;
@@ -62,20 +40,26 @@ public class Conta {
 		this.limite = limite;
 	}
 
-	public String getNome() {
-		return nome;
-	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	//metodos
+	public boolean saca(double valor) {
+		return false;
 	}
-
+	
+	public void deposita(double valor) {
+		
+	}
+	
+	public void transfere(Conta destino, double valor) {
+		
+	}
+	
 	public static void main (String[] args) {
 		
-		Conta conta1 = new Conta();
-		Conta conta2 = new Conta();
+		Conta conta = new Conta();
+		conta.cliente = new Cliente[5]; //1 até 5
 		
-		conta1.transfere(conta2, 50.00);
 	}
-
+	
 }
+ 
