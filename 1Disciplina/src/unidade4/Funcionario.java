@@ -1,6 +1,9 @@
 package unidade4;
 
-public class Funcionario {
+public abstract class Funcionario {
+	
+	public abstract void getBonificacao();
+	
 
 	public static void main(String[] args) {
 		
@@ -18,7 +21,7 @@ public class Funcionario {
 		int f = (a+5); char g = (char)110.5f;
 		
 		
-		Funcionario jose = new Funcionario();
+	//	Funcionario jose = new Funcionario();
 		Funcionario antonio = new Professor();
 		Funcionario andrea = new Administrativo();
 		Funcionario pedro = new Diretor();
@@ -39,4 +42,9 @@ public class Funcionario {
 			System.out.println("Administrativo");
 		
 	}
+	
+	Professor prof = new Professor();
+	Autenticavel aut = prof; // interface recebendo referencia de um objeto
+	Cidadao cidadao = prof;
+	Contribuinte contribuinte = prof;
 }
