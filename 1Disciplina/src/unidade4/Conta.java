@@ -1,5 +1,7 @@
 package unidade4;
 
+import unidade3.sisalucar.Cliente;
+
 public class Conta {
 	
 	
